@@ -1,0 +1,302 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    color: black;
+    font-size: 24px;
+    font-family: Impact, serif;
+    background-color: lightgrey;
+}
+
+#login {
+    text-align: center;
+}
+#logo {
+    height: 100%;
+    width: 100%;
+    margin-bottom: -6px;
+}
+header {
+    font-size:200%;
+    padding:10px;
+}
+#loggintext {
+    color:black;
+}
+form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border:1px solid black;
+    background:white;
+    border-radius: 0 0 10px 10px;
+}
+#footer {
+    height: 50px;
+    background-color: grey;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    position: fixed;
+
+
+}
+#footertext {
+    font-size: 90%;
+    text-align: center;
+    color: #af3a32;
+    padding: 5px;
+    margin: 0;
+}
+#mainpagepic {
+    width: 100%;
+
+}
+#centrera {
+    width: 40%;
+    padding-left: 30%;
+}
+.input-group {
+    margin:10px 0 10px 0;
+}
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color:white;
+    background: #5F9EA0;
+
+}
+#signInButton {
+    text-decoration: underline;
+    color: #5F9EA0;
+}
+.error {
+    width: 92%;
+    margin: 0 auto;
+    padding: 10px;
+    border:1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align:left;
+}
+
+p {
+    color: #333333;
+    word-spacing:1px;
+    padding:10px;
+}
+a {
+    text-decoration: none;
+    color:inherit;
+}
+nav ul {
+    background-color: #606060;
+    overflow:hidden;
+    color:black;
+    padding:0;
+    text-align: center;
+    margin:0;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+nav ul li {
+    display:inline-block;
+    padding: 15px 50px;
+    color:black;
+
+}
+nav ul li:hover {
+    background-color:white;
+    transition: 1s;
+}
+/* classes */
+.handle{
+    width:100%;
+    background-color: #b0b0b0;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 50px;
+    cursor: pointer;
+    display:none;
+}
+.content {
+    text-align: center;
+
+}
+.leftside {
+    float: left;
+    width: 50%;
+    margin-left: 0;
+    padding-left: 0;
+
+}
+.rightside {
+    float: right;
+    width: 50%;
+    font-size: 150%;
+
+}
+.twitch {
+    padding:20px;
+    float: left;
+
+}
+.youtube {
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* media querys */
+@media screen and (max-width: 950px) {
+    nav ul{
+        max-height: 0;
+    }
+    .showing {
+        max-height: 20em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+
+    }
+    .handle {
+        display:block;
+    }
+    form {
+        width: 100%;
+    }
+    #footer {
+        height: 30px;
+        background-color: grey;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+    }
+    #mainpagepic {
+        display: none;
+    }
+    .rightside {
+        padding-right: 20%;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 1920px) {
+    .discord iframe {
+        height: 660px;
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    nav ul li {
+        font-size: 200%;
+    }
+    p {
+        font-size:150%;
+    }
+    header {
+        font-size: 400%;
+    }
+    b {
+        font-size: 150%;
+    }
+    .youtube iframe {
+        width: 1854px;
+        height: 980px;
+    }
+    .discord iframe {
+        height: 800px;
+        width: 600px;
+    }
+    #footer {
+        height: 80px;
+
+    }
+    #footertext {
+        font-size: 150%;
+
+    }
+
+}
+@media screen and (min-width: 3840px) {
+    nav ul li {
+        font-size:300%;
+    }
+    p {
+        font-size:350%;
+    }
+    header {
+        font-size: 600%;
+    }
+    b {
+        font-size: 300%;
+    }
+    .youtube iframe {
+        width: 1854px;
+        height: 980px;
+    }
+    .discord iframe {
+        height: 1200px;
+        width: 900px;
+    }
+    #footer {
+        height: 120px;
+
+    }
+    #footertext {
+        font-size: 200%;
+
+    }
+
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #929292;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}

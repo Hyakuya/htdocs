@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Anime shop</title>
+    <script src="shop.js"></script>
+    <style type="text/css">
+
+        /* set all margins on this page to zero      */
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #fff9f6;
+            color: #630000;
+            font-size: 24px;
+            font-family: "georgia";
+            /* top right bottom left margins */
+            margin: 30px 0 0 100px;
+
+        }
+
+        header {width:100%;background:darkblue;
+            color:white;position:absolute;top:0;left:0;
+                text-align:center;}
+
+        #cart {position:absolute;right:0; width:300px; height:500px; border:1px solid black;}
+        .item {display:flex; flex-direction:column; display:inline-flex;align-items: center; background: white;
+
+        width:200px;height:300px;border:1px solid darkgray; }
+    .btn { bottom:0;
+        width:90%;height:24px;}
+
+        h4 {background: black;color:white;width:100%;font-size:16px;
+            text-align:center;font-weight:normal;padding:3px;font-family:verdana;
+            }
+
+        h6 {font-size:14px;color:black;font-family:verdana;font-weight:normal;}
+
+        img {max-width:100px;}
+
+    </style>
+
+</head>
+
+<body>
+<header>some anime items</header>
+<div id="cart">
+    <h4>Your Items</h4>
+    <button class "btn" id="btncart">Click here to show your cart</button>
+    <div id="cart1"></div>
+
+</div>
+
+
+<div class="item">
+    <h4>Mika</h4>
+    <img src="gif.gif">
+    <h6>Description ....</h6>
+    <button class="btn" id="Mika">Add To Cart</button>
+
+</div>
+
+<div class="item">
+    <h4>Naruto</h4>
+    <img src="gif.gif">
+    <h6>Description ....</h6>
+    <button class="btn" id="Naruto">Add To Cart</button>
+
+</div>
+
+<div class="item">
+    <h4>Ichigo</h4>
+    <img src="gif.gif">
+    <h6>Description ....</h6>
+    <button class="btn" id="Ichigo">Add To Cart</button>
+
+</div>
+
+<div class="item">
+    <h4>Luffy</h4>
+    <img src="gif.gif">
+    <h6>Description ....</h6>
+    <button class="btn" id="Luffy">Add To Cart</button>
+
+</div>
+</body>
+</html>

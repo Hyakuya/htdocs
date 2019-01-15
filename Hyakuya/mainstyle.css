@@ -1,0 +1,300 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    color: black;
+    font-size: 24px;
+    font-family: Impact, serif;
+    background-color: lightgrey;
+}
+#logo {
+    height: 100%;
+    width: 100%;
+    margin-bottom: -6px;
+}
+#footer {
+    height: 50px;
+    background-color: #cd2f26;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    position: fixed;
+}
+header {
+    font-size:200%;
+    padding:10px;
+}
+#footertext {
+    font-size: 90%;
+    text-align: center;
+    color: black;
+    padding: 5px;
+    margin: 0;
+}
+nav ul {
+    background-color: #cd2f26;
+    overflow:hidden;
+    color:black;
+    padding:0;
+    text-align: center;
+    margin:0;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+nav ul li {
+    display:inline-block;
+    padding: 15px 100px;
+    color:black;
+
+
+}
+nav ul li:hover {
+    background-color:#706969;
+    transition: 1s;
+}
+#centrera {
+    width: 40%;
+    padding-left: 30%;
+}
+#login {
+    text-align: center;
+}
+#loggintext {
+    color:black;
+}
+form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border:1px solid black;
+    background:white;
+    border-radius: 0 0 10px 10px;
+}
+.input-group {
+    margin:10px 0 10px 0;
+}
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color:white;
+    background: red;
+
+}
+#signInButton {
+    text-decoration: underline;
+    color: red;
+}
+.error {
+    width: 92%;
+    margin: 0 auto;
+    padding: 10px;
+    border:1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align:left;
+}
+
+p {
+    color: #333333;
+    word-spacing:2px;
+    padding:10px;
+
+
+}
+a {
+    text-decoration: none;
+    color:inherit;
+
+}
+.handle{
+    width:100%;
+    background-color: #cd2f26;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 50px;
+    cursor: pointer;
+    display:none;
+
+}
+.content {
+    text-align: center;
+
+
+
+
+}
+.youtube iframe {
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #929292;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+/* Media querys */
+@media screen and (max-width: 950px) {
+    nav ul{
+        max-height: 0;
+    }
+    .showing {
+        max-height: 20em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+    }
+    .handle {
+        display:block;
+    }
+    form {
+        width: 100%;
+    }
+    #footer {
+        height: 30px;
+        background-color: #cd2f26;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+    }
+    .youtube iframe {
+        width: 300px;
+        height: 150px;
+        padding-right: -10px;
+    }
+
+
+
+
+}
+@media screen and (min-width: 1919px) {
+    .discord iframe {
+        height: 660px;
+        width: 500px;
+    }
+    header {
+        font-size: 300%;
+    }
+    p {
+        font-size: 150%;
+    }
+    #channelLink {
+        font-size:150%;
+    }
+    .youtube iframe {
+        width: 889px;
+        height: 500px;
+
+
+    }
+}
+@media screen and (min-width: 2559px) {
+    nav ul li {
+        font-size: 200%;
+    }
+    p {
+        font-size:200%;
+    }
+    #channelLink {
+        font-size:200%;
+    }
+    header {
+        font-size: 400%;
+    }
+    b {
+        font-size: 150%;
+    }
+    .youtube iframe {
+        width: 1854px;
+        height: 980px;
+    }
+    .discord iframe {
+        height: 800px;
+        width: 600px;
+    }
+    #footer {
+        height: 80px;
+
+
+    }
+    #footertext {
+        font-size: 150%;
+
+    }
+
+}
+@media screen and (min-width: 3839px) {
+    nav ul li {
+        font-size:300%;
+        padding: 15px 150px;
+    }
+    p {
+        font-size:350%;
+    }
+    #channelLink {
+        font-size:350%;
+    }
+    header {
+        font-size: 600%;
+    }
+    b {
+        font-size: 300%;
+    }
+    .youtube iframe {
+        width: 1854px;
+        height: 980px;
+    }
+    .discord iframe {
+        height: 1200px;
+        width: 900px;
+    }
+    #footer {
+        height: 120px;
+
+    }
+    #footertext {
+        font-size: 200%;
+
+    }
+
+}
