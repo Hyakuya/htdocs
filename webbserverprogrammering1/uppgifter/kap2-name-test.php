@@ -25,38 +25,38 @@ if (!empty($submitted_name)) {
 header("Content-type: text/html; charset=utf-8");
 ?>
 <!doctype html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>[Varierande sidtitel som du hittar på själv]</title>
+    <title>Name Test</title>
     <style>
         body {
             font-family: sans-serif;
-            /* + tillägg du vill göra för att göra sidan lite snyggare */
+
         }
     </style>
 </head>
 <body>
-    <h1>Avsnitt 2.3: Nametest</h1>
+    <h1>Chapter 2.3: Name test</h1>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
           <p>
-              <label for="name">Vad heter du?</label>
+              <label for="name">What's your name old chap?</label>
               <input type="text" name="name" id="name"
-                     placeholder="ex. Åke Svensson" />
+                     placeholder="ex. Darious Tanz" />
           </p>
           <p>
-              <input type="submit" value="Testa namnet"/>
+              <input type="submit" value="Test namne"/>
           </p>
     </form>
 <?php
 if ($namedata) {
     echo <<<DATA
     <dl>
-        <dt>Name</dt>
+        <dt>Name:</dt>
         <dd>{$output_name}</dd>
-        <dt>Antal tecken ( inklusive ev. mellanslag i mitten</dt>
+        <dt>Total letters including spaces:</dt>
         <dd>{$charcount}</dd>
-        <dt>Namnet backlänges</dt>
+        <dt>Your name in reverse:</dt>
         <dd>{$name_reversed}</dd>
     </dl>
 DATA;
