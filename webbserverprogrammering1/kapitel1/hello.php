@@ -5,3 +5,4 @@ if (empty($_GET['name'])) {
 } else {
     echo '<h1>Hej ', filter_input(INPUT_GET, 'name', FILTER_SANITIZE_SPECIAL_CHARS), '</h1>';
 }
+?>
