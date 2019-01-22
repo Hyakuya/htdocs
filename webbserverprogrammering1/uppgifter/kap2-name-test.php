@@ -40,7 +40,7 @@ header("Content-type: text/html; charset=utf-8");
     <h1>Chapter 2.3: Name test</h1>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
           <p>
-              <label for="name">What's your name old chap?</label>
+              <label for="name">What's your name?</label>
               <input type="text" name="name" id="name"
                      placeholder="ex. Darious Tanz" />
           </p>
