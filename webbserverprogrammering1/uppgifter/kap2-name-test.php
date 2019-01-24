@@ -45,7 +45,7 @@ header("Content-type: text/html; charset=utf-8");
                      placeholder="ex. Darious Tanz" />
           </p>
           <p>
-              <input type="submit" value="Test namne"/>
+              <input type="submit" value="Test namn"/>
           </p>
     </form>
 <?php
