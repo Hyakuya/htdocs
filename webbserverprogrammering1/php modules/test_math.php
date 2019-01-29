@@ -39,6 +39,6 @@ class test_math extends TestCase
         $this->assertEquals(-25, division(-50,2));
         $this->assertEquals(1, division(4.5,4.5));
         $this->assertEquals(4.5, division(20.25, 4.5));
-        $this->assertEquals(25, division(100,4));
+        $this->assertEquals(null, division(100,0));
     }
 }

@@ -1,52 +1,27 @@
 <?php
 /**
- * it does calculations with an userinterface
+ * it does calculations with an userinterface and query string
  *
  * using a module for funciton. gets parameters from a form, filter the input and use the functions and displays the answer.
+ * using a modue for functions gets parameters from query string filters the input and use the functions and display the answer
  */
 
 include('math.php');
 
 $errors = array();
-$op = filter_input(INPUT_GET, 'op', FILTER_SANITIZE_SPECIAL_CHARS);
-$x = filter_input(INPUT_GET, 'x', FILTER_SANITIZE_SPECIAL_CHARS);
-$y = filter_input(INPUT_GET, 'y', FILTER_SANITIZE_SPECIAL_CHARS);
 
-if($_SERVER['REQUEST_METHOD'] == "GET") {
-    if(empty($x) AND !$x == 0) {
-        array_push($errors, "First number is blank");
-    }
-    else if(empty($y) AND  !$y == 0) {
-        array_push($errors, "Second number is blank");
-    }
-    else if(!is_numeric($x) AND !empty($x)) {
-        array_push($errors, "You can't use letters for the first number");
-    }
-    else if(!is_numeric($y) AND !empty($y)) {
-        array_push($errors, "You can't use letters for the second number");
-    }
-    else if(empty($op)) {
-        array_push($errors, "Not chosen what calculation");
-    }
-    else if ($op =='d' AND $y == 0) {
-        array_push($errors, "Can't divide it by zero");
-    }
 
-    if(count($errors) == 0) {
-        if($op == 'a') {
-            $answer = addition($x,$y);
-        }
-        if($op == 's') {
-            $answer = subtraction($x,$y);
-        }
-        if($op == 'm') {
-            $answer = multiplication($x,$y);
-        }
-        if($op == 'd') {
-                $answer = division($x,$y);
-        }
-    }
-
+if($_SERVER['REQUEST_METHOD'] == "POST") {
+    $op = filter_input(INPUT_POST, 'op', FILTER_SANITIZE_SPECIAL_CHARS);
+    $x = filter_input(INPUT_POST, 'x', FILTER_SANITIZE_SPECIAL_CHARS);
+    $y = filter_input(INPUT_POST, 'y', FILTER_SANITIZE_SPECIAL_CHARS);
+    include('errorAndCalc.php');
+}
+else if(!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y']) ) {
+    $op = filter_input(INPUT_GET, 'op', FILTER_SANITIZE_SPECIAL_CHARS);
+    $x = filter_input(INPUT_GET, 'x', FILTER_SANITIZE_SPECIAL_CHARS);
+    $y = filter_input(INPUT_GET, 'y', FILTER_SANITIZE_SPECIAL_CHARS);
+    include('errorAndCalc.php');
 }
 
 header("Content-type: text/html; charset=utf-8");
@@ -90,7 +65,7 @@ header("Content-type: text/html; charset=utf-8");
 </head>
 <body>
 <div>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <h2>Simple calculator xD</h2>
         <p>
             <label for="name">Number one</label>
@@ -116,7 +91,12 @@ header("Content-type: text/html; charset=utf-8");
         <div id="answer">
             <p>Your answer:</p>
             <?php
-            if($_SERVER['REQUEST_METHOD'] == "GET") {
+            if($_SERVER['REQUEST_METHOD'] == "POST") {
+                if (count($errors) == 0) {
+                    echo "<p> $answer </p>";
+                }
+            }
+            else if (!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y'])) {
                 if (count($errors) == 0) {
                     echo "<p> $answer </p>";
                 }
