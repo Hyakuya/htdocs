@@ -1,6 +1,6 @@
 <?php
-function addition($addend, $addend) {
-    return $addend + $addend;
+function addition($addendOne, $addendTwo) {
+    return $addendOne + $addendTwo;
 }
 function subtraction($minuend, $subtrahend) {
     return $minuend - $subtrahend;
