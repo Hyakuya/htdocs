@@ -1,37 +1,29 @@
+<?php
+/**
+ * Mall för sidan om-oss
+ */
+?>
 <!-- I kapitel 4 ska du kopiera från den här filen för att skapa flera olika mallar -->
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="utf‐8" />
     <title>Vilka vi är ‐ Läxhjälpen</title>
-    <meta http‐equiv="X‐UA‐Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/" />
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' />
-    <link href="css/laxhjalpen.css" rel="stylesheet" />
+    <link href="../html/css/laxhjalpen.css" rel="stylesheet" />
 </head>
 <body class="subpage">
-
-<header>
-    <div class="hwrap">
-        <a href="./"><img class="logo" alt="Startsidan" src="img/laxlogo.png" /></a>
-        <h1>Läxhjälpen: <span><?php echo $h1span; ?></span></h1>
-    </div>
-    <hr />
-</header>
-
-<nav>
-    <ul class="menu">
-        <li><a href="om‐oss.html">Vilka vi är &#x3020;</a></li>
-        <li><a href="arbeten.html">Vad vi gör &#x2318;</a></li>
-        <li><a href="blog.php">Blogg &#x272A;</a></li>
-        <li><a href="contact.php">Kontakt &#x260E;</a></li>
-    </ul>
-</nav>
+<?php
+require "masterhead.php";
+require  "menu.php";
+?>
 
 <div role="main">
     <article class="block">
         <figure class="alignleft">
-            <img src="img/tjej1.png" alt="Det här är jag - Mia">
+            <img src="../html/img/tjej1.png" alt="Det här är jag - Mia">
             <figcaption class="bildcaption double">
                 Mia
             </figcaption>
@@ -52,7 +44,7 @@
     </article>
     <article class="block">
         <figure class="alignleft">
-            <img src="img/kille1.png" alt="Det här är jag - Pelle">
+            <img src="../html/img/kille1.png" alt="Det här är jag - Pelle">
             <figcaption class="bildcaption double">
                 Pelle
             </figcaption>
@@ -73,7 +65,7 @@
     </article>
     <article class="block">
         <figure class="alignleft">
-            <img src="img/tjej2.png" alt="Det här är jag - Petra">
+            <img src="../html/img/tjej2.png" alt="Det här är jag - Petra">
             <figcaption class="bildcaption double">
                 Petra
             </figcaption>
@@ -93,7 +85,7 @@
     </article>
     <article class="block">
         <figure class="alignleft">
-            <img src="img/kille2.png" alt="Det här är jag - Johan">
+            <img src="../html/img/kille2.png" alt="Det här är jag - Johan">
             <figcaption class="bildcaption double">
                 Johan
             </figcaption>
@@ -113,9 +105,9 @@
     </article>
 </div>
 
-<footer>
-    <small>&copy; Lars Gunther och Thelin AB</small>
-</footer>
+<?php
+require "footer.php";
+?>
 
 </body>
 </html>

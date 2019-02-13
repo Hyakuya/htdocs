@@ -1,8 +1,10 @@
 <?php
 /**
+ *  a webbsite that counts characters in a name
  *
  *
- *
+ *  it filters input in a from a POST and makes a varible with namedata. counting characters and even reverses it. and gives
+ *  an output
  */
 
 function utf8_strrev($str) {
