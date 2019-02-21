@@ -1,18 +1,39 @@
 <?php
 /**
- *  a webbsite that counts characters in a name
+ *  A webbsite that counts characters in a name.
  *
+ *  It filters input in a from a POST and makes a varible with namedata.
+ *  counting characters and even reverses it. and gives
+ *  an output.
+ * php version 7
  *
- *  it filters input in a from a POST and makes a varible with namedata. counting characters and even reverses it. and gives
- *  an output
+ * @category Course
+ *
+ * @package Omoss
+ *
+ * @author Hyakuya <limpan.naslund@hotmail.com>
+ *
+ * @license Hyakuya dev team
+ *
+ * @link http://localhost/webbserverprogrammering1/uppgifter/kap2-name-test.php
  */
 
-function utf8_strrev($str) {
+/**
+ * Utf8_strrev()
+ * Makes it into utf8.
+ *
+ * @param String $str string input
+ *
+ * @return string in utf8
+ */
+function Utf8_strrev($str) 
+{
     preg_match_all('/./us', $str, $temp_arr);
     return join('', array_reverse($temp_arr[0]));
 }
 
-$submitted_name = filter_input(INPUT_POST, 'name', FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW);
+$submitted_name =
+    filter_input(INPUT_POST, 'name', FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW);
 
 $namedata = false;
 if (!empty($submitted_name)) {

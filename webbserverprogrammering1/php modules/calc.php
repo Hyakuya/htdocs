@@ -1,27 +1,39 @@
 <?php
 /**
- * it does calculations with an userinterface and query string
+ * It does calculations with an userinterface and query string.
  *
- * using a module for funciton. gets parameters from a form, filter the input and use the functions and displays the answer.
- * using a modue for functions gets parameters from query string filters the input and use the functions and display the answer
+ * Using a module for funciton. gets parameters from a form,
+ * filter the input and use the functions and displays the answer.
+ * using a modue for functions gets parameters from query string filters
+ * the input and use the functions and display the answer.
+ * php version 7
+ *
+ * @category Course
+ *
+ * @package Calc
+ *
+ * @author Hyakuya <limpan.naslund@hotmail.com>
+ *
+ * @license Hyakuya dev team
+ *
+ * @link http://localhost/webbserverprogammering1/php%20moduels/calc.php
  */
 
-include('math.php');
+require 'math.php';
 
 $errors = array();
 
 
-if($_SERVER['REQUEST_METHOD'] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $op = filter_input(INPUT_POST, 'op', FILTER_SANITIZE_SPECIAL_CHARS);
     $x = filter_input(INPUT_POST, 'x', FILTER_SANITIZE_SPECIAL_CHARS);
     $y = filter_input(INPUT_POST, 'y', FILTER_SANITIZE_SPECIAL_CHARS);
-    include('errorAndCalc.php');
-}
-else if(!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y']) ) {
+    include 'errorAndCalc.php';
+} else if (!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y']) ) {
     $op = filter_input(INPUT_GET, 'op', FILTER_SANITIZE_SPECIAL_CHARS);
     $x = filter_input(INPUT_GET, 'x', FILTER_SANITIZE_SPECIAL_CHARS);
     $y = filter_input(INPUT_GET, 'y', FILTER_SANITIZE_SPECIAL_CHARS);
-    include('errorAndCalc.php');
+    include 'errorAndCalc.php';
 }
 
 header("Content-type: text/html; charset=utf-8");
@@ -90,26 +102,27 @@ header("Content-type: text/html; charset=utf-8");
         </p>
         <div id="answer">
             <p>Your answer:</p>
-            <?php
-            if($_SERVER['REQUEST_METHOD'] == "POST") {
-                if (count($errors) == 0) {
-                    echo "<p> $answer </p>";
-                }
-            }
-            else if (!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y'])) {
-                if (count($errors) == 0) {
-                    echo "<p> $answer </p>";
-                }
-            }
-            ?>
-            <?php
-            if (count($errors) > 0): ?>
-                <div class="error">
-                    <?php foreach ($errors as $error): ?>
-                        <p><?php echo $error;?></p>
-                    <?php endforeach ?>
-                </div>
-            <?php endif ?>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        if (count($errors) == 0) {
+            echo "<p> $answer </p>";
+        }
+    } else if (!empty($_GET['op']) AND !empty($_GET['x']) AND !empty($_GET['y'])) {
+        if (count($errors) == 0) {
+            echo "<p> $answer </p>";
+        }
+    }
+    ?>
+    <?php
+    if (count($errors) > 0) : ?>
+
+    <div class="error">
+        <?php foreach ($errors as $error): ?>
+            <p><?php echo $error;?></p>
+        <?php endforeach ?>
+    </div>
+
+    <?php endif ?>
         </div>
     </form>
 

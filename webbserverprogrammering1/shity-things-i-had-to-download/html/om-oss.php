@@ -1,8 +1,17 @@
 <?php
 /**
- * Page controler för Läxhjälpens sida Om oss
+ * Page controller for about us.
+ * php version 7
  *
- * Denna påbörjas i kapitel
+ * @category Course
+ *
+ * @package Omoss
+ *
+ * @author Hyakuya <limpan.naslund@hotmail.com>
+ *
+ * @license Hyakuya dev team
+ *
+ * @link http://localhost/webbserverprogrammering1/template/om-oss.php
  */
 
 $h1span = "Om oss";
