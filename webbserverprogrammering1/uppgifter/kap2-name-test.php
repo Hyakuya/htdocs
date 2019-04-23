@@ -77,7 +77,7 @@ if ($namedata) {
     <dl>
         <dt>Name:</dt>
         <dd>{$output_name}</dd>
-        <dt>Total letters including spaces:</dt>
+        <dt>Total letters including spaces:</dt>    
         <dd>{$charcount}</dd>
         <dt>Your name in reverse:</dt>
         <dd>{$name_reversed}</dd>

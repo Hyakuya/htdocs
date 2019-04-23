@@ -11,14 +11,15 @@
 use PHPUnit\Framework\TestCase;
 require ('math.php');
 
-class test_math extends TestCase
+Class Test_Math extends TestCase
 {
-    public function testAddition() {
-        $this->assertEquals(10, addition(5,5));
-        $this->assertEquals(-20, addition(-40,20));
-        $this->assertEquals(9, addition(4.5,4.5));
-        $this->assertEquals(5.5, addition(2,3.5));
-        $this->assertEquals(9058, addition(2524,6534));
+    public function testAddition() 
+    {
+        $this->assertEquals(10, addition(5, 5));
+        $this->assertEquals(-20, addition(-40, 20));
+        $this->assertEquals(9, addition(4.5, 4.5));
+        $this->assertEquals(5.5, addition(2, 3.5));
+        $this->assertEquals(9058, addition(2524, 6534));
     }
     public function testSubtraction() {
         $this->assertEquals(40, subtraction(80,40));
